@@ -4,7 +4,7 @@ Documentation    Arquivo base do projeto
 Library    Browser    timeout=30s
 
 *** Variables ***
-${IMPLICIT_TIMEOUT}    10
+${implicit_timeout}    10
 ${BASE_URL}            http://localhost:3000/
 
 

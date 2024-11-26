@@ -13,9 +13,9 @@ Test Teardown    Take Screenshot
 *** Test Cases ***
 Deve cadastrar um novo usuário
     Acessar home do site
-    Clicar em se cadastrar
-    # Preencher formulario
-    # Validar cadastro com sucesso
+    Clicar em Criar Conta
+    Preencher Formulario
+    Validar Cadastro com Sucesso
 
 
 
