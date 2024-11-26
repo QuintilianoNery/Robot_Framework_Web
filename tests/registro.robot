@@ -1,8 +1,6 @@
 *** Settings ***
 Documentation    Cenários de testes do cadastro do usuário
 
-Library     Browser
-
 Resource    ../resources/support/base.robot
 Resource    ../resources/actions/home/home.robot
 Resource    ../resources/actions/autenticacao/signup.robot
