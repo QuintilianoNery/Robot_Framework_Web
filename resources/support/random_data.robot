@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation         Fábrica de Dados Dinâmicos e Estáticos
+Documentation         Dados Dinâmicos e Estáticos
 
 Library               OperatingSystem
 Library               FakerLibrary

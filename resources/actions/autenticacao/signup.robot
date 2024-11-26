@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Ações para validação de cadastro
 
-Resource    ../../support/factory.robot
+Resource    ../../support/random_data.robot
 Resource    ../../support/base.robot
 
 

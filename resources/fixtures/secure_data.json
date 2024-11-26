@@ -5,8 +5,8 @@
         "name":"QA"
     },
     "invalido":{
-        "email":"nao.existo@aqui.com.br",
-        "senha":"1senharuim2",
+        "email":"qa@invalido.com.br",
+        "senha":"senha12345",
         "name":"TesteQA"
     }
 }

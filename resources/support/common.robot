@@ -2,14 +2,14 @@
 Documentation    Arquivo com keywords comuns e que pode ser utilizadas por todos os testes
 
 Resource    ../actions/autenticacao/login.robot
-Resource    factory.robot
+Resource    random_data.robot
 
 
 *** Keywords ***
 Carregar Dados de Usuários Estáticos
     [Documentation]    Deve ser utilizado nos testes quando os dados estáticos forem necessários
 
-    ${static_users}    Run Keyword            Ler JSON           sensitive
+    ${static_users}    Run Keyword            Ler JSON           secure_data
     Run Keyword        Set Global Variable    ${static_users}
 
 
