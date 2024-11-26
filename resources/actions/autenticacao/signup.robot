@@ -14,7 +14,7 @@ ${input_email}       css=#email
 ${input_password}    css=#password
 ${btn_signup}        css=#buttonSignup
 # Mensagem
-${notice_pop-up}                 div[class="notice success"]
+${notice_success_popup}          div[class="notice success"]
 ${notice_register_success}       .notice p
 ${text_message_notice_sucess}    Boas vindas ao Mark85, o seu gerenciador de tarefas.
 
@@ -36,6 +36,6 @@ Clicar no botão Cadastrar
     click    ${btn_signup}
 
 Validar Cadastro com Sucesso
-    Wait For Elements State    ${notice_pop-up}              visible     ${implicit_timeout}
+    Wait For Elements State    ${notice_success_popup}       visible     ${implicit_timeout}
     Wait For Elements State    ${notice_register_success}    visible     ${implicit_timeout}
     Get Text                   ${notice_register_success}    contains    ${text_message_notice_sucess}

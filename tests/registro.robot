@@ -10,6 +10,7 @@ Test Teardown    Take Screenshot
 
 *** Test Cases ***
 Deve cadastrar um novo usuário
+    [ tags ]                        smoke
     Acessar home do site
     Clicar em Criar Conta
     Preencher Formulario
