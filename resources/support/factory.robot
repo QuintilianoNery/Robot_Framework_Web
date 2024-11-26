@@ -21,7 +21,5 @@ Gerar Dados de Usuário Aleatório
     ${email}          FakerLibrary.Email
     ${password}       FakerLibrary.Password
 
-
     ${user_data}      Create Dictionary    first_name=${first_name}  last_name=${last_name}  password=${password}  email=${email} 
-
     RETURN          ${user_data}

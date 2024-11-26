@@ -10,6 +10,6 @@ ${BASE_URL}            http://localhost:3000/
 
 *** Keywords    ***
 Start Application
-    New Browser    chromium            false
+    New Browser    chromium    false
     New Page       ${BASE_URL}
    #Set Viewport Size       1920    1080

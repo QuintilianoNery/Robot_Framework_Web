@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation    Ações para validação de cadastro
 
-Library     FakerLibrary
 Resource    ../../support/factory.robot
 Resource    ../../support/base.robot
 
@@ -15,8 +14,9 @@ ${input_email}       css=#email
 ${input_password}    css=#password
 ${btn_signup}        css=#buttonSignup
 # Mensagem
-${txt_my_account}         div[class="notice success"]
-${text_message_sucess}    Boas vindas ao Mark85, o seu gerenciador de tarefas.
+${notice_pop-up}                 div[class="notice success"]
+${notice_register_success}       .notice p
+${text_message_notice_sucess}    Boas vindas ao Mark85, o seu gerenciador de tarefas.
 
 
 *** Keywords    ***
@@ -36,5 +36,6 @@ Clicar no botão Cadastrar
     click    ${btn_signup}
 
 Validar Cadastro com Sucesso
-    Wait For Elements State    ${txt_my_account}    visible     ${implicit_timeout}
-    Get Text                   ${txt_my_account}    contains    ${text_message_sucess}
+    Wait For Elements State    ${notice_pop-up}              visible     ${implicit_timeout}
+    Wait For Elements State    ${notice_register_success}    visible     ${implicit_timeout}
+    Get Text                   ${notice_register_success}    contains    ${text_message_notice_sucess}
