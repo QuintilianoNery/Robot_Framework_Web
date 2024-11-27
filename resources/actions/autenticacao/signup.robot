@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation    Ações para validação de cadastro
 
-Resource    ../../support/random_data.robot
 Resource    ../../support/base.robot
 
 
@@ -25,12 +24,20 @@ Clicar em Criar Conta
     Wait For Elements State    ${text_title_signup}    visible    ${implicit_timeout}
     Get text                   ${text_title_signup}    equal      Faça seu cadastro
 
-Preencher Formulario
-    ${random_user}               Gerar Dados de Usuário Aleatório
-    Fill Text                    ${input_name}                       ${random_user["first_name"]}
-    Fill Text                    ${input_email}                      ${random_user["email"]}
-    Fill Text                    ${input_password}                   ${random_user["password"]}
+Preencher Formulario dados fixos
+    [Arguments]                  ${name}              ${email}       ${password}
+    Fill Text                    ${input_name}        ${name}
+    Fill Text                    ${input_email}       ${email}
+    Fill Text                    ${input_password}    ${password}
     Clicar no botão Cadastrar
+
+Preencher Formulario dados randômico
+    [Arguments]                  ${name}              ${email}       ${password}
+    Fill Text                    ${input_name}        ${name}
+    Fill Text                    ${input_email}       ${email}
+    Fill Text                    ${input_password}    ${password}
+    Clicar no botão Cadastrar
+
 
 Clicar no botão Cadastrar
     click    ${btn_signup}
