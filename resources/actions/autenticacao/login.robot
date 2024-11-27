@@ -9,8 +9,8 @@ ${input_password}      css=#password
 ${btn_submit_login}    css=#buttonLogin
 ${text_name_user}      css=div[class="right"]
 #Componentes do pop-up de erro
-${notice_error_popup}    div[class="notice error"]
-${class_txt_error}       .notice p
+${notice_error_popup}    css=div[class="notice error"]
+${class_txt_error}       css=.notice p
 ${txt_error}             Ocorreu um erro ao fazer login, verifique suas credenciais.
 #componentes do campo em branco
 ${alert_text_error}             css=small[class="alert-error"]

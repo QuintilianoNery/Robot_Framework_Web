@@ -14,8 +14,8 @@ ${input_email}       css=#email
 ${input_password}    css=#password
 ${btn_signup}        css=#buttonSignup
 # Mensagem
-${notice_success_popup}          div[class="notice success"]
-${notice_register_success}       .notice p
+${notice_success_popup}          css=div[class="notice success"]
+${notice_register_success}       css=.notice p
 ${text_message_notice_sucess}    Boas vindas ao Mark85, o seu gerenciador de tarefas.
 
 
