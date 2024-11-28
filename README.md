@@ -104,5 +104,6 @@ Siga os passos abaixo para configurar o banco de dados:
     robot -d .\reports -i <tag> .\tests\<nome_do_teste>.robot; start .\reports\report.html
     ```
    - -d gera os arquivos de log na pasta reports
-   - -i irá executar todos os testes com aquela tag mencionada
+   - -i incluir uma determinada tag para executar os testes
+   - -e exclui aquela tag da execução dos testes
    - ;start executa um comando após os testes para abrir o report.html 
