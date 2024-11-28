@@ -1,15 +1,15 @@
 {
-    "usuarioValido1":{
+    "usuario_valido1":{
         "email":"user1@qa.com.br",
         "senha":"123456",
         "name":"QA1"
     },
-    "usuarioValido2":{
+    "usuario_valido2":{
         "email":"user2@qa.com.br",
         "senha":"123456",
         "name":"QA2"
     },
-    "invalido1":{
+    "usuario_invalido1":{
         "email":"user3@invalido.com.br",
         "senha":"senha12345",
         "name":"TesteQA"
