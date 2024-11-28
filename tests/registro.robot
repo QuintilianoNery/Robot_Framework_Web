@@ -18,14 +18,14 @@ ${text_message_notice_error}     Oops! Já existe uma conta com o e-mail informa
 *** Test Cases ***
 Deve cadastrar novo usuário com dados fixos
     [ tags ]                                        smoke
-    Remover usuario pelo email do banco de dados    ${static_users["usuario_valido1"]["email"]}
+    Remover usuario pelo email do banco de dados    ${static_users["usuarioValido1"]["email"]}
     Clicar em Criar Conta
-    Preencher Formulario dados fixos                ${static_users["usuario_valido1"]["name"]}     ${static_users["usuario_valido1"]["email"]}    ${static_users["usuario_valido1"]["senha"]}
+    Preencher Formulario dados fixos                ${static_users["usuarioValido1"]["name"]}     ${static_users["usuarioValido1"]["email"]}    ${static_users["usuarioValido1"]["senha"]}
     Validar mensagem                                ${text_message_notice_sucess}
 
 
 Deve cadastrar novo usuário com dados randômicos
-    [ tags ]                                        random
+    [ tags ]                                        random                            
     ${random_user}                                  Gerar Dados de Usuário Aleatório
     Clicar em Criar Conta
     Preencher Formulario dados randômico            ${random_user["first_name"]}        ${random_user["email"]}    ${random_user["password"]}
@@ -35,8 +35,8 @@ Deve cadastrar novo usuário com dados randômicos
 
 Não deve permitir o cadastro com e-mail duplicado
     [ tags ]                                        smoke2
-    Remover usuario pelo email do banco de dados    ${static_users["usuario_valido2"]["email"]}
-    Incluir usuario no banco de dados               ${static_users["usuario_valido2"]["name"]}     ${static_users["usuario_valido2"]["email"]}    ${static_users["usuario_valido2"]["senha"]}
+    Remover usuario pelo email do banco de dados    ${static_users["usuarioValido2"]["email"]}
+    Incluir usuario no banco de dados               ${static_users["usuarioValido2"]["name"]}     ${static_users["usuarioValido2"]["email"]}    ${static_users["usuarioValido2"]["senha"]}
     Clicar em Criar Conta
-    Preencher Formulario dados fixos                ${static_users["usuario_valido2"]["name"]}     ${static_users["usuario_valido2"]["email"]}    ${static_users["usuario_valido2"]["senha"]}
+    Preencher Formulario dados fixos                ${static_users["usuarioValido2"]["name"]}     ${static_users["usuarioValido2"]["email"]}    ${static_users["usuarioValido2"]["senha"]}
     Validar mensagem                                ${text_message_notice_error}

@@ -20,15 +20,15 @@ Deve Fazer Login com Dados Válidos
     Validar Login com Sucesso    ${static_users["usuario_valido1"]["name"]}
 
 Não Deve Fazer Login com Dados Inválidos
-    [ tags ]                                      smoke
-    [Template]                                    Realizar Login Inválido Com
-    ${static_users["usuario_invalido1"]["email"]}         ${static_users["usuario_invalido1"]["senha"]}
-    ${static_users["usuario_valido1"]["email"]}    ${static_users["usuario_invalido1"]["senha"]}
-    ${static_users["usuario_invalido1"]["email"]}         ${static_users["usuario_valido1"]["senha"]}
+    [ tags ]                                         smoke
+    [Template]                                       Realizar Login Inválido Com
+    ${static_users["usuario_invalido1"]["email"]}    ${static_users["usuario_invalido1"]["senha"]}
+    ${static_users["usuario_valido1"]["email"]}      ${static_users["usuario_invalido1"]["senha"]}
+    ${static_users["usuario_invalido1"]["email"]}    ${static_users["usuario_valido1"]["senha"]}
 
 Não Deve Fazer Login com Dados em Branco
     [ tags ]                              smoke
-    Fazer login com                       ${EMPTY}                                      ${static_users["usuario_valido1"]["senha"]}
+    Fazer login com                       ${EMPTY}                                       ${static_users["usuario_valido1"]["senha"]}
     Validar Login com e-mail em Branco
     Fazer login com                       ${static_users["usuario_valido1"]["email"]}    ${EMPTY}
     Validar Login com senha em Branco
