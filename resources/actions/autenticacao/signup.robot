@@ -13,9 +13,9 @@ ${input_email}       css=#email
 ${input_password}    css=#password
 ${btn_signup}        css=#buttonSignup
 # Mensagem
-${notice_success_popup}          css=div[class="notice success"]
-${notice_register_success}       css=.notice p
-${text_message_notice_sucess}    Boas vindas ao Mark85, o seu gerenciador de tarefas.
+${notice_popup}               css=div[class*="notice-container"]
+${notice_register_success}    css=.notice p
+
 
 
 *** Keywords    ***
@@ -42,7 +42,8 @@ Preencher Formulario dados randômico
 Clicar no botão Cadastrar
     click    ${btn_signup}
 
-Validar Cadastro com Sucesso
-    Wait For Elements State    ${notice_success_popup}       visible     ${implicit_timeout}
+Validar mensagem
+    [Arguments]                ${text_message_notice}
+    Wait For Elements State    ${notice_popup}               visible     ${implicit_timeout}
     Wait For Elements State    ${notice_register_success}    visible     ${implicit_timeout}
-    Get Text                   ${notice_register_success}    contains    ${text_message_notice_sucess}
+    Get Text                   ${notice_register_success}    contains    ${text_message_notice}

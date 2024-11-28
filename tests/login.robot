@@ -23,7 +23,7 @@ Não Deve Fazer Login com Dados Inválidos
     ${static_users["valido"]["email"]}      ${static_users["invalido"]["senha"]}
     ${static_users["invalido"]["email"]}    ${static_users["valido"]["senha"]}
 
-Não Deve Fazer Login com dados em Branco
+Não Deve Fazer Login com Dados em Branco
     Fazer login com                       ${EMPTY}                              ${static_users["valido"]["senha"]}
     Validar Login com e-mail em Branco
     Fazer login com                       ${static_users["valido"]["email"]}    ${EMPTY}
