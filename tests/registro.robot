@@ -25,15 +25,18 @@ Deve cadastrar novo usuário com dados fixos
 
 
 Deve cadastrar novo usuário com dados randômicos
-    [ tags ]                                random
-    ${random_user}                          Gerar Dados de Usuário Aleatório
+    [ tags ]                                        random
+    ${random_user}                                  Gerar Dados de Usuário Aleatório
     Clicar em Criar Conta
-    Preencher Formulario dados randômico    ${random_user["first_name"]}        ${random_user["email"]}    ${random_user["password"]}
-    Validar mensagem                        ${text_message_notice_sucess}
+    Preencher Formulario dados randômico            ${random_user["first_name"]}        ${random_user["email"]}    ${random_user["password"]}
+    Validar mensagem                                ${text_message_notice_sucess}
+    Remover usuario pelo email do banco de dados    ${random_user["email"]}
+
 
 Não deve permitir o cadastro com e-mail duplicado
-    [ tags ]                             smoke
-    Incluir usuario no banco de dados    ${static_users["usuarioValido2"]["name"]}    ${static_users["usuarioValido2"]["email"]}    ${static_users["usuarioValido2"]["senha"]}
+    [ tags ]                                        smoke2
+    Remover usuario pelo email do banco de dados    ${static_users["usuarioValido2"]["email"]}
+    Incluir usuario no banco de dados               ${static_users["usuarioValido2"]["name"]}     ${static_users["usuarioValido2"]["email"]}    ${static_users["usuarioValido2"]["senha"]}
     Clicar em Criar Conta
-    Preencher Formulario dados fixos     ${static_users["usuarioValido2"]["name"]}    ${static_users["usuarioValido2"]["email"]}    ${static_users["usuarioValido2"]["senha"]}
-    Validar mensagem                     ${text_message_notice_error}
+    Preencher Formulario dados fixos                ${static_users["usuarioValido2"]["name"]}     ${static_users["usuarioValido2"]["email"]}    ${static_users["usuarioValido2"]["senha"]}
+    Validar mensagem                                ${text_message_notice_error}
