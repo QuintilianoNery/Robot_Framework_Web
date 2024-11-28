@@ -1,11 +1,16 @@
 {
-    "valido":{
-        "email":"testano@qa.com.br",
+    "usuarioValido1":{
+        "email":"user1@qa.com.br",
         "senha":"123456",
-        "name":"QA"
+        "name":"QA1"
     },
-    "invalido":{
-        "email":"qa@invalido.com.br",
+    "usuarioValido2":{
+        "email":"user2@qa.com.br",
+        "senha":"123456",
+        "name":"QA2"
+    },
+    "invalido1":{
+        "email":"user3@invalido.com.br",
         "senha":"senha12345",
         "name":"TesteQA"
     }

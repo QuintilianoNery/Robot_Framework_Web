@@ -12,19 +12,20 @@ Test Teardown    Take Screenshot
 
 *** Test Cases ***
 Deve Fazer Login com Dados Válidos
-    [ tags ]                     smoke
-    Fazer login com              ${static_users["valido"]["email"]}    ${static_users["valido"]["senha"]}
-    Validar Login com Sucesso    ${static_users["valido"]["name"]}
+    [ tags ]                     smoke1
+    Fazer login com              ${static_users["usuarioValido1"]["email"]}    ${static_users["usuarioValido1"]["senha"]}
+    Validar Login com Sucesso    ${static_users["usuarioValido1"]["name"]}
 
 Não Deve Fazer Login com Dados Inválidos
-    [ tags ]                                smoke
-    [Template]                              Realizar Login Inválido Com
-    ${static_users["invalido"]["email"]}    ${static_users["invalido"]["senha"]}
-    ${static_users["valido"]["email"]}      ${static_users["invalido"]["senha"]}
-    ${static_users["invalido"]["email"]}    ${static_users["valido"]["senha"]}
+    [ tags ]                                      smoke1
+    [Template]                                    Realizar Login Inválido Com
+    ${static_users["invalido1"]["email"]}         ${static_users["invalido1"]["senha"]}
+    ${static_users["usuarioValido1"]["email"]}    ${static_users["invalido1"]["senha"]}
+    ${static_users["invalido1"]["email"]}         ${static_users["usuarioValido1"]["senha"]}
 
 Não Deve Fazer Login com Dados em Branco
-    Fazer login com                       ${EMPTY}                              ${static_users["valido"]["senha"]}
+    [ tags ]                              smoke1
+    Fazer login com                       ${EMPTY}                                      ${static_users["usuarioValido1"]["senha"]}
     Validar Login com e-mail em Branco
-    Fazer login com                       ${static_users["valido"]["email"]}    ${EMPTY}
+    Fazer login com                       ${static_users["usuarioValido1"]["email"]}    ${EMPTY}
     Validar Login com senha em Branco
